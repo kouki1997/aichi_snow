@@ -103,18 +103,7 @@
 			<br/>
 			<div id="dat"></div>  <!-- データ表示用 div 要素 -->
 			<input class="btn" type="button" value="wait, loading video" disabled="disabled" onclick="startVideo()" id="startbutton"></input>
-			<div id="text">
-				<p>This is an example of face tracking using the javascript library <a href="https://github.com/auduno/clmtrackr"><em>clmtrackr</em></a>. The fitting method is generally called "Non-rigid/deformable face tracking/alignment using constrained local models".</p>
-				<p>Note that this example works best in Google Chrome, with a computer that supports WebGL and floating point textures. It should however work in any modern browser.</p>
-				<div id="gum" class="gum">
-					<p>To try it out:
-						<ol>
-							<li>allow the page to use your webcamera</li>
-							<li>make sure that your face is clearly visible in the video, and click start</li>
-							<li>see the model fitted to your face</li>
-						<ol>
-					</p>
-				</div>
+
 				<div id="nogum" class="nogum">
 					<p>
 						There was some problem trying to capture your webcamera, please check that your browser supports WebRTC. Using a fallback video instead. To try it out:
@@ -262,6 +251,7 @@ stampEars.src = "ears.png";                             // ★耳のスタンプ
 				// ★スタンプを描く drawStamp 関数
 // (顔部品の位置データ, 画像, 基準位置, 大きさ, 横シフト, 縦シフト)
 function drawStamp(pos, img, bNo, scale, hShift, vShift) {
+if(pos == false) return true; //これがないと、検知されなかった時にundefinedになる
   var eyes = pos[32][0] - pos[27][0];                   // 幅の基準として両眼の間隔を求める
   var nose = pos[62][1] - pos[33][1];                   // 高さの基準として眉間と鼻先の間隔を求める
   var wScale = eyes / img.width;                        // 両眼の間隔をもとに画像のスケールを決める
