@@ -105,7 +105,7 @@
 				let stampEars2 = new Image();
 				let gifImage = new Image();
 				let gifImage2 = new Image();
-				let gitImage3 = new Image();
+				let gifImage3 = new Image();
 
 				stampNose.src = "nose.png";
 				stampEars.src = "ears.png";
@@ -113,7 +113,7 @@
 				stampEars2.src = "ears2.png";
 				gifImage.src = "images/gif1.gif";
 				gifImage2.src = "images/gif2.gif";
-				gitImage3.src = "images/gif3.gif";
+				gifImage3.src = "images/gif3.gif";
 
 				function drawLoop() {
 					requestAnimFrame(drawLoop);
