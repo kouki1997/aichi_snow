@@ -126,9 +126,9 @@
   				      //drawStamp(positions, stampEars, 33, 3.0, 0.0, -1.8);  // ★耳のスタンプを描画
   				      drawStamp(positions,stampGlasses,40, 2.5, -0.3, -0.5); //メガネのスタンプを描画
   				      drawStamp(positions, stampEars2, 33, 3.0, 0.0, -1.8); // 猫の耳
-								drawStamp(positions, gifImage, 33, 3.0, 0.0, -1.8); // gif画像
+								//drawStamp(positions, gifImage, 33, 3.0, 0.0, -1.8); // gif画像
                 //drawStamp(positions, gifImage2, 33, 3.0, 0.0, -1.8); // gif画像
-								//drawStamp(positions, gifImage3, 33, 3.0, 0.0, -1.8);
+								drawStamp(positions, gifImage3, 33, 3.0, 0.0, -1.8);
 
   				      //＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 					//psrElement.innerHTML = "score :" + ctrack.getScore().toFixed(4);
