@@ -103,10 +103,14 @@ var stampNose = new Image();
 var stampEars = new Image();                        
 var stampGlasses = new Image();                     
 var stampEars2 = new Image();
+var gifImage = new Image();
+
 stampNose.src = "nose.png";                        
 stampEars.src = "ears.png";                           
 stampGlasses.src = "glasses.png";       				 
 stampEars2.src = "ears2.png";
+gifImage.src = "images/osiri.gif";
+
 
 				function drawLoop() {
 					requestAnimFrame(drawLoop);
@@ -119,6 +123,9 @@ stampEars2.src = "ears2.png";
   				      //drawStamp(positions, stampEars, 33, 3.0, 0.0, -1.8);  // ★耳のスタンプを描画
   				      drawStamp(positions,stampGlasses,40, 2.5, -0.3, -0.5); //メガネのスタンプを描画
   				      drawStamp(positions, stampEars2, 33, 3.0, 0.0, -1.8); // 猫の耳
+
+                  drawStamp(positions, gifImage, 33, 3.0, 0.0, -1.8); // 猫の耳
+
   				      //＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 					//psrElement.innerHTML = "score :" + ctrack.getScore().toFixed(4);
 					if (ctrack.getCurrentPosition()) {
