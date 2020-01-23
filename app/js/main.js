@@ -109,7 +109,8 @@ stampNose.src = "nose.png";
 stampEars.src = "ears.png";                           
 stampGlasses.src = "glasses.png";       				 
 stampEars2.src = "ears2.png";
-gifImage.src = "images/osiri.gif";
+gifImage.src = "images/gif1.gif";
+gifImage2.src = "images/gif2.gif";
 
 				function drawLoop() {
 					requestAnimFrame(drawLoop);
@@ -124,6 +125,7 @@ gifImage.src = "images/osiri.gif";
   				      drawStamp(positions, stampEars2, 33, 3.0, 0.0, -1.8); // 猫の耳
 
                   //drawStamp(positions, gifImage, 33, 3.0, 0.0, -1.8); // gif画像
+                  drawStamp(positions, gifImage2, 33, 3.0, 0.0, -1.8); // gif画像
 
   				      //＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 					//psrElement.innerHTML = "score :" + ctrack.getScore().toFixed(4);
