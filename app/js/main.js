@@ -111,7 +111,7 @@
 				stampEars.src = "ears.png";
 				stampGlasses.src = "glasses.png";
 				stampEars2.src = "ears2.png";
-				gifImage1.src = "images/gif1_new.gif";
+				gifImage1.src = "images/gif1.gif";
 				gifImage2.src = "images/gif2.gif";
 				gifImage3.src = "images/gif3.gif";
 
@@ -126,7 +126,7 @@
   				      //drawStamp(positions, stampEars, 33, 3.0, 0.0, -1.8);  // ★耳のスタンプを描画
   				      drawStamp(positions,stampGlasses,40, 2.5, -0.3, -0.5); //メガネのスタンプを描画
   				      drawStamp(positions, stampEars2, 33, 3.0, 0.0, -1.8); // 猫の耳
-								drawStamp(positions, gifImage1, 33, 3.0, 0.0, -1.8); // gif画像
+								drawStamp(positions, gifImage1, 33, 2.0, 0.0, -2.1); // gif画像
                 //drawStamp(positions, gifImage2, 33, 3.0, 0.0, -1.8); // gif画像
 								//drawStamp(positions, gifImage3, 33, 3.0, 0.0, -1.8);
 
