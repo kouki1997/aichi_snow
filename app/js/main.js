@@ -104,6 +104,7 @@ var stampEars = new Image();
 var stampGlasses = new Image();                     
 var stampEars2 = new Image();
 var gifImage = new Image();
+var gifImage2 = new Image();
 
 stampNose.src = "nose.png";                        
 stampEars.src = "ears.png";                           
