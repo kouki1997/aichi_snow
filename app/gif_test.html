@@ -5,15 +5,11 @@
 <meta charset="utf-8">
 <link href="./style
 <link href="./styles/style.css" rel="stylesheet" type="text/css">
-<script src="./js/libs/freezeframe.min.js"></script>
-<script>
-new Freezeframe();
 
-new Freezeframe({
-  selector: '.my-class-2',
-  trigger: 'click'
-});
-</script>
+
+<script src="./js/libs/freezeframe.min.js"></script>
+
+<script src="./js/gif_player.js"></script>
 
 
 </head>
@@ -24,3 +20,11 @@ new Freezeframe({
 
 </body>
 </html>
+
+<!--
+
+Freezeframe.jsではアニメーションgifの最初のフレームだけをcanvasに書き込み、gifの静止画バージョンを自動作成します。あとは、この静止画バージョンとアニメーションgifをトリガーで切り替え、アニメーションgifを再生・停止させます。
+下記は、ホバーでアニメーションgifを再生・停止します。
+
+
+-->
