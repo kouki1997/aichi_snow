@@ -1,18 +1,18 @@
-				let vid = document.getElementById('videoel');
-				let vid_width = vid.width;
-				let vid_height = vid.height;
-				let overlay = document.getElementById('overlay');
-				let overlayCC = overlay.getContext('2d');
+				var vid = document.getElementById('videoel');
+				var vid_width = vid.width;
+				var vid_height = vid.height;
+				var overlay = document.getElementById('overlay');
+				var overlayCC = overlay.getContext('2d');
 
 				/*********** Setup of video/webcam and checking for webGL support *********/
 
 				function enablestart() {
-					let startbutton = document.getElementById('startbutton');
+					var startbutton = document.getElementById('startbutton');
 					startbutton.value = "start";
 					startbutton.disabled = null;
 				}
 
-				let insertAltVideo = function(video) {
+				var insertAltVideo = function(video) {
 					// insert alternate video if getUserMedia not available
 					if (supports_video()) {
 						if (supports_webm_video()) {
@@ -29,7 +29,7 @@
 				function adjustVideoProportions() {
 					// resize overlay and video if proportions of video are not 4:3
 					// keep same height, just change width
-					let proportion = vid.videoWidth/vid.videoHeight;
+					var proportion = vid.videoWidth/vid.videoHeight;
 					vid_width = Math.round(vid_height * proportion);
 					vid.width = vid_width;
 					overlay.width = vid_width;
@@ -83,9 +83,9 @@
 
 				/*********** Code for face tracking *********/
 
-				let ctrack = new clm.tracker();
+				var ctrack = new clm.tracker();
 				ctrack.init();
-				let trackingStarted = false;
+				var trackingStarted = false;
 
 				function startVideo() {
 					// start video
@@ -97,15 +97,15 @@
 					drawLoop();
 				}
 
-				let canvas = document.getElementById("overlay");         // canvas 要素の取得
-				let context = canvas.getContext("2d");                  // canvas の context の取得
-				let stampNose = new Image();
-				let stampEars = new Image();
-				let stampGlasses = new Image();
-				let stampEars2 = new Image();
-				let gifImage = new Image();
-				let gifImage2 = new Image();
-				let gitImage3 = new Image();
+				var canvas = document.getElementById("overlay");         // canvas 要素の取得
+				var context = canvas.getContext("2d");                  // canvas の context の取得
+				var stampNose = new Image();
+				var stampEars = new Image();
+				var stampGlasses = new Image();
+				var stampEars2 = new Image();
+				var gifImage = new Image();
+				var gifImage2 = new Image();
+				var gitImage3 = new Image();
 
 				stampNose.src = "nose.png";
 				stampEars.src = "ears.png";
@@ -119,7 +119,7 @@
 					requestAnimFrame(drawLoop);
 					overlayCC.clearRect(0, 0, vid_width, vid_height);
 					//＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
-					  let positions = ctrack.getCurrentPosition();         // 顔部品の現在位置の取得
+					  var positions = ctrack.getCurrentPosition();         // 顔部品の現在位置の取得
   					  showData(positions);                                  // データの表示
   					  // (顔部品の位置データ, 画像, 基準位置, 大きさ, 横シフト, 縦シフト)
   					  drawStamp(positions, stampNose, 62, 2.5, 0.0, 0.0);   // ★鼻のスタンプを描画
@@ -139,13 +139,13 @@
 
 				// 顔部品（特徴点）の位置データを表示する showData 関数
 				function showData(pos) {
-				  let str = "";                                         // データの文字列を入れる変数
-				  for(let i = 0; i < pos.length; i++) {                 // 全ての特徴点（71個）について
+				  var str = "";                                         // データの文字列を入れる変数
+				  for(var i = 0; i < pos.length; i++) {                 // 全ての特徴点（71個）について
 				    str += "特徴点" + i + ": ("
 				         + Math.round(pos[i][0]) + ", "                 // X座標（四捨五入して整数に）
 				         + Math.round(pos[i][1]) + ")<br>";             // Y座標（四捨五入して整数に）
 				  }
-				  let dat = document.getElementById("dat");             // データ表示用div要素の取得
+				  var dat = document.getElementById("dat");             // データ表示用div要素の取得
 				  dat.innerHTML = str;                                  // データ文字列の表示
 				}
 
@@ -153,13 +153,13 @@
 // (顔部品の位置データ, 画像, 基準位置, 大きさ, 横シフト, 縦シフト)
 function drawStamp(pos, img, bNo, scale, hShift, vShift) {
 if(pos == false) return true; //これがないと、検知されなかった時にundefinedになる
-  let eyes = pos[32][0] - pos[27][0];                   // 幅の基準として両眼の間隔を求める
-  let nose = pos[62][1] - pos[33][1];                   // 高さの基準として眉間と鼻先の間隔を求める
-  let wScale = eyes / img.width;                        // 両眼の間隔をもとに画像のスケールを決める
-  let imgW = img.width * scale * wScale;                // 画像の幅をスケーリング
-  let imgH = img.height * scale * wScale;               // 画像の高さをスケーリング
-  let imgL = pos[bNo][0] - imgW / 2 + eyes * hShift;    // 画像のLeftを決める
-  let imgT = pos[bNo][1] - imgH / 2 + nose * vShift;    // 画像のTopを決める
+  var eyes = pos[32][0] - pos[27][0];                   // 幅の基準として両眼の間隔を求める
+  var nose = pos[62][1] - pos[33][1];                   // 高さの基準として眉間と鼻先の間隔を求める
+  var wScale = eyes / img.width;                        // 両眼の間隔をもとに画像のスケールを決める
+  var imgW = img.width * scale * wScale;                // 画像の幅をスケーリング
+  var imgH = img.height * scale * wScale;               // 画像の高さをスケーリング
+  var imgL = pos[bNo][0] - imgW / 2 + eyes * hShift;    // 画像のLeftを決める
+  var imgT = pos[bNo][1] - imgH / 2 + nose * vShift;    // 画像のTopを決める
   context.drawImage(img, imgL, imgT, imgW, imgH);       // 画像を描く
 }
 
