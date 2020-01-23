@@ -109,8 +109,7 @@ stampNose.src = "nose.png";
 stampEars.src = "ears.png";                           
 stampGlasses.src = "glasses.png";       				 
 stampEars2.src = "ears2.png";
-//gifImage.src = "images/osiri.gif";
-gifImage.src = "images/gif2.gif";
+gifImage.src = "images/osiri.gif";
 
 				function drawLoop() {
 					requestAnimFrame(drawLoop);
