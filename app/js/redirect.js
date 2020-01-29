@@ -4,8 +4,6 @@
 			} else if (window.location.hostname !== "localhost" && window.location.protocol !== "https:"){
 				window.location.protocol = "https";
 			}
-		</script>
-		<script type="text/javascript">
 
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-32642923-1']);

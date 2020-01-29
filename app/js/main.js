@@ -107,10 +107,10 @@
 				let gifImage2 = new Image();
 				let gifImage3 = new Image();
 
-				stampNose.src = "nose.png";
-				stampEars.src = "ears.png";
-				stampGlasses.src = "glasses.png";
-				stampEars2.src = "ears2.png";
+				stampNose.src = "images/nose.png";
+				stampEars.src = "images/ears.png";
+				stampGlasses.src = "images/glasses.png";
+				stampEars2.src = "images/ears2.png";
 				gifImage1.src = "images/gif1.gif";
 				gifImage2.src = "images/gif2.gif";
 				gifImage3.src = "images/gif3.gif";
