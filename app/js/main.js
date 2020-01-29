@@ -97,6 +97,7 @@
 					drawLoop();
 				}
 
+				//gifの表示の仕方検討
 				let canvas = document.getElementById("overlay");         // canvas 要素の取得
 				let context = canvas.getContext("2d");                  // canvas の context の取得
 				let stampNose = new Image();
