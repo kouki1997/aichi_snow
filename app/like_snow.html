@@ -1,38 +1,43 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<title>snowみたいなアプリ</title>
-		<meta charset="utf-8">
-		<link href="./styles/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link href="./styles/style.css" rel="stylesheet" type="text/css">
-		<script src="./js/redirect.js"></script>
-	</head>
-	<body>
-		<script src="./js/libs/utils.js"></script>
-		<script src="../build/clmtrackr.js"></script>
-		<script src="./js/libs/Stats.js"></script>
-		<div id="content">
-			<h2>Snowみたいなアプリ(startボタンで開始)</h2>
-			<div id="container">
-				<video id="videoel" width="800" height="600" preload="auto" loop playsinline autoplay>
-				</video>
-				<canvas id="overlay" width="800" height="600"></canvas>
-			</div>
-			<br/>
-			<div id="dat"></div>  <!-- データ表示用 div 要素 -->
-			<input class="btn" type="button" value="wait, loading video" disabled="disabled" onclick="startVideo()" id="startbutton"></input>
 
-				<div id="nogum" class="nogum">
-					<p>
-						There was some problem trying to capture your webcamera, please check that your browser supports WebRTC. Using a fallback video instead. To try it out:
-						<ol>
-							<li>click start</li>
-							<li>see the model fitted to the face</li>
-						</ol>
-					</p>
-				</div>
-			</div>
-			<script src="./js/main.js"></script>
+<head>
+	<title>snowみたいなアプリ</title>
+	<meta charset="utf-8">
+	<link href="./styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="./styles/style.css" rel="stylesheet" type="text/css">
+	<script src="./js/redirect.js"></script>
+</head>
+
+<body>
+	<script src="./js/libs/utils.js"></script>
+	<script src="../build/clmtrackr.js"></script>
+	<script src="./js/libs/Stats.js"></script>
+	<div id="content">
+		<h2>Snowみたいなアプリ(startボタンで開始)</h2>
+		<div id="container">
+			<video id="videoel" width="800" height="600" preload="auto" loop playsinline autoplay>
+			</video>
+			<canvas id="overlay" width="800" height="600"></canvas>
 		</div>
-	</body>
+		<br />
+		<div id="dat"></div> <!-- データ表示用 div 要素 -->
+		<input class="btn" type="button" value="wait, loading video" disabled="disabled" onclick="startVideo()"
+			id="startbutton"></input>
+
+		<div id="nogum" class="nogum">
+			<p>
+				There was some problem trying to capture your webcamera, please check that your browser supports WebRTC.
+				Using a fallback video instead. To try it out:
+				<ol>
+					<li>click start</li>
+					<li>see the model fitted to the face</li>
+				</ol>
+			</p>
+		</div>
+	</div>
+	<script src="./js/main.js"></script>
+	</div>
+</body>
+
 </html>
