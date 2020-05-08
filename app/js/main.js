@@ -108,7 +108,7 @@ let gifImage1 = new Image();
 let gifImage2 = new Image();
 let gifImage3 = new Image();
 
-stampNose.src = "images/nose3.png";
+stampNose.src = "images/nose.png";
 stampEars.src = "images/ears.png";
 stampGlasses.src = "images/glasses.png";
 stampEars2.src = "images/ears2.png";
